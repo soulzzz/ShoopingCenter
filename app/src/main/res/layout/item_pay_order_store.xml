@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/store_div"
+        >
+
+        <ImageView
+            android:id="@+id/store_icon"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_store_icon"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/store_name"
+            android:layout_toRightOf="@+id/store_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="store_name"
+            android:drawableRight="@drawable/ic_arrow_right"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_div"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/store_div"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

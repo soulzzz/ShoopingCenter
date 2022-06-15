@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/halfgray"
+    tools:context=".fragments.PersonalityFragment" >
+
+    <RelativeLayout
+        android:paddingTop="20dp"
+        android:id="@+id/iconsection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:paddingBottom="10dp"
+        android:background="@color/white">
+
+            <com.xmut.shoppingcenter.utils.ImageUtil.RadiuImageView
+                android:id="@+id/profile_img"
+                android:layout_width="100dp"
+                android:scaleType="centerCrop"
+                android:layout_height="100dp"
+                android:src="@drawable/avatar"
+                android:layout_margin="20dp"
+                app:radius="15dp"
+               />
+
+
+
+        <TextView
+            android:id="@+id/profile_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profile_img"
+            android:text="Username"
+            android:layout_centerVertical="true"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+
+        <ImageView
+            android:id="@+id/person_goto"
+            android:layout_width="23dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_goto" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/iconsection"
+        android:id="@+id/recordsection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/collect"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏"
+            style="@style/personpart"
+            android:drawableTop="@drawable/ic_collect_blue"/>
+
+        <TextView
+            android:id="@+id/subscribe"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订阅"
+            style="@style/personpart"
+            android:drawableTop="@drawable/ic_subscribe_blue"/>
+
+        <TextView
+            android:id="@+id/foot"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="足迹"
+            style="@style/personpart"
+            android:drawableTop="@drawable/ic_footer"/>
+        <TextView
+            android:id="@+id/coupon"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卡券"
+            style="@style/personpart"
+            android:drawableTop="@drawable/ic_coupon_blue"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/ordersection"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_below="@+id/recordsection"
+        android:background="@drawable/white_bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/myordertext"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/item_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的订单"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                />
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+                <TextView
+                    android:id="@+id/allorder_goto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全部订单"
+                    android:gravity="center"
+                    android:drawableRight="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            >
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/waitpay"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="待付款"
+                    android:focusable="true"
+                    app:drawableTopCompat="@drawable/ic_waitpay" />
+                <TextView
+                    android:id="@+id/waitpay_num"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_alignParentRight="true"
+                    android:text="99+"
+
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@id/waitsend"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="待发货"
+                    app:drawableTopCompat="@drawable/ic_waitsend"
+                    android:focusable="true" />
+                <TextView
+                    android:id="@+id/waitsend_num"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_alignParentRight="true"
+                    android:text="99+"
+
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@id/waitreceive"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="待收货"
+                    android:focusable="true"
+                    app:drawableTopCompat="@drawable/ic_waitreceive" />
+                <TextView
+
+                    android:id="@+id/waitreceive_num"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_alignParentRight="true"
+                    android:text="99+"
+
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/waitcomment"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="待评价"
+                    android:focusable="true"
+                    app:drawableTopCompat="@drawable/ic_success" />
+                <TextView
+                    android:id="@+id/waitcomment_num"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_alignParentRight="true"
+                    android:text="99+"
+
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:id="@+id/refund"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="退款相关"
+                    android:focusable="true"
+                    app:drawableTopCompat="@drawable/ic_refund" />
+                <TextView
+                    android:id="@+id/refund_num"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_alignParentRight="true"
+                    android:text="99+"
+
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ordersection"
+        android:background="@drawable/item_background"
+        android:elevation="0dp">
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="设置"
+            style="@style/personpart"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:background="@color/white"
+            app:drawableLeftCompat="@drawable/ic_setting" />
+        <ImageView
+            android:id="@+id/pwd_goto"
+            android:layout_width="23dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_goto" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

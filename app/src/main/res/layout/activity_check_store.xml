@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment"
+    android:background="@color/halfgray">
+
+    <RelativeLayout
+        android:id="@+id/top_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        >
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/leave_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_left_arrow"/>
+        <EditText
+            android:layout_toRightOf="@+id/leave_bt"
+            android:drawableStart="@drawable/ic_search"
+            android:id="@+id/edit_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:hint="搜索店内宝贝"
+            android:background="@drawable/white_bg"
+            />
+        <Button
+            android:layout_alignParentRight="true"
+            android:id="@+id/search_bt"
+            android:layout_margin="1dp"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:background="@drawable/orange_bg"/>
+
+    </RelativeLayout>
+
+
+    <com.xmut.shoppingcenter.utils.scrollviewUtil.MyScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@id/top_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/store_iconsection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+
+                android:background="@drawable/text_bg">
+
+                <com.xmut.shoppingcenter.utils.ImageUtil.RadiuImageView
+                    android:id="@+id/store_img"
+                    android:layout_width="50dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+
+                    app:radius="10dp"/>
+
+                <TextView
+                    android:layout_below="@id/store_img"
+                    android:id="@+id/subscribe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ 订阅"
+                    android:padding="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/halfwhite_bg"
+                    android:textSize="15sp"
+                    android:layout_alignParentEnd="true"
+                    android:textStyle="bold"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/orange" />
+                <TextView
+                    android:id="@+id/store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Store Name"
+                    android:layout_marginTop="10dp"
+                    android:textSize="22sp"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/store_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/store_name"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/store_img"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text="Store DES"
+                    android:textColor="#828181"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/store_iconsection"
+                android:background="@drawable/white_bg"
+                android:orientation="horizontal"
+                android:id="@+id/filter_div">
+                <RelativeLayout
+                    android:id="@+id/filter_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:textColor="@color/halfblack"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/filter_1_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="综合"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/filter_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/filter_2_text"
+                        android:textColor="@color/halfblack"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="销量"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:gravity="center"
+                    android:id="@+id/filter_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/filter_3_text"
+                        android:textColor="@color/halfblack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="价格"/>
+                    <ImageView
+                        android:layout_toRightOf="@+id/filter_3_text"
+                        android:id="@+id/filter_3_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_up"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:gravity="center"
+                    android:id="@+id/div3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <ImageView
+
+                        android:layout_marginStart="14dp"
+                        android:id="@+id/sort_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_grid"/>
+                    <!--            <RelativeLayout-->
+                    <!--                android:id="@+id/filter_3"-->
+                    <!--                android:layout_toRightOf="@id/sort_icon"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content">-->
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/filter_3_text"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_toLeftOf="@+id/filter_3_icon"-->
+                    <!--                    android:textColor="@color/halfblack"-->
+                    <!--                    android:text="筛选"-->
+                    <!--                    />-->
+                    <!--                <ImageView-->
+                    <!--                    android:id="@+id/filter_3_icon"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:src="@drawable/ic_filter"/>-->
+                    <!--            </RelativeLayout>-->
+
+                </RelativeLayout>
+            </LinearLayout>
+            <ScrollView
+                android:id="@+id/scrollview"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/filter_div"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec_product"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_below="@+id/t1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </ScrollView>
+        </RelativeLayout>
+    </com.xmut.shoppingcenter.utils.scrollviewUtil.MyScrollView>
+    <LinearLayout
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/top_search_bar"
+        android:background="@drawable/white_bg"
+        android:orientation="horizontal"
+        android:id="@+id/filter_div2">
+        <RelativeLayout
+            android:id="@+id/filter_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:textColor="@color/halfblack"
+                android:layout_centerInParent="true"
+                android:id="@+id/filter_1_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="综合"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/filter_22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/filter_2_text2"
+                android:textColor="@color/halfblack"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="销量"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:gravity="center"
+            android:id="@+id/filter_32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/filter_3_text2"
+                android:textColor="@color/halfblack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="价格"/>
+            <ImageView
+                android:layout_toRightOf="@+id/filter_3_text2"
+                android:id="@+id/filter_3_icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_up"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:gravity="center"
+            android:id="@+id/div32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+
+                android:layout_marginStart="14dp"
+                android:id="@+id/sort_icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_grid"/>
+            <!--            <RelativeLayout-->
+            <!--                android:id="@+id/filter_3"-->
+            <!--                android:layout_toRightOf="@id/sort_icon"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content">-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/filter_3_text"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_toLeftOf="@+id/filter_3_icon"-->
+            <!--                    android:textColor="@color/halfblack"-->
+            <!--                    android:text="筛选"-->
+            <!--                    />-->
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/filter_3_icon"-->
+            <!--                    android:layout_alignParentEnd="true"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:src="@drawable/ic_filter"/>-->
+            <!--            </RelativeLayout>-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/nullshow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/ic_emo"
+            android:src="@drawable/ic_emo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/ic_emo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="竟然找不到你要的东西"/>
+    </RelativeLayout>
+</RelativeLayout>

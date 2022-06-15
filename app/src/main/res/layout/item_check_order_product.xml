@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/store_div">
+    <com.xmut.shoppingcenter.utils.ImageUtil.RadiuImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/product_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitXY"
+        app:radius="10dp"
+        android:src="@drawable/avatar"
+        >
+    </com.xmut.shoppingcenter.utils.ImageUtil.RadiuImageView>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:id="@+id/product_name"
+        android:layout_toRightOf="@+id/product_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="product_name"/>
+
+    <RelativeLayout
+        android:layout_toRightOf="@+id/product_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/rmb"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/warning_red"
+            android:text="¥"
+            />
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/product_price"
+            android:layout_toRightOf="@+id/rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/warning_red"
+            android:text="10.10"
+            />
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_toLeftOf="@+id/product_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/product_num"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="visible"/>
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CheckOrderDetailActivity"
+    android:background="@color/halfgray">
+    <RelativeLayout
+        android:id="@+id/topdiv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/halfgray">
+        <ImageView
+            android:id="@+id/leaveorder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_left_arrow"/>
+        <TextView
+            android:id="@+id/order_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:text="交易成功"/>
+    </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/topdiv"
+            android:id="@+id/recyclerview"
+            android:background="@color/halfwhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:id="@+id/orderinfo"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerview">
+        <TextView
+            android:layout_margin="5dp"
+            android:id="@+id/orderid"
+            android:layout_toRightOf="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单编号: 66666666666"/>
+        <TextView
+            android:layout_below="@id/orderid"
+            android:layout_margin="5dp"
+            android:id="@+id/time"
+            android:layout_toRightOf="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单时间: 2021.07.12 08:45:45"/>
+
+        <TextView
+            android:layout_margin="5dp"
+        android:id="@+id/address"
+        android:layout_below="@id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收货信息: addresspart"/>
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        >
+        <TextView
+            android:layout_toLeftOf="@id/state"
+            android:id="@+id/request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消订单"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:background="@drawable/blue_bg"/>
+        <TextView
+            android:layout_toLeftOf="@id/state"
+            android:layout_marginRight="5dp"
+            android:id="@+id/check_reason"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:text="查看退单理由"
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:background="@drawable/orange_bg"/>
+        <TextView
+            android:layout_toLeftOf="@id/state"
+            android:layout_marginRight="5dp"
+            android:id="@+id/check_express"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:text="查看物流"
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:background="@drawable/orange_bg"/>
+        <TextView
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="状态"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/orange_bg"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

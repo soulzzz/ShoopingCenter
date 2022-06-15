@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment"
+    android:background="@color/gray">
+    <RelativeLayout
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="购物车"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/manage"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="管理"
+            android:layout_marginRight="3dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!--    <RelativeLayout-->
+    <!--        android:layout_below="@+id/title1"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:id="@+id/top_search_bar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_marginLeft="5dp"-->
+    <!--        android:layout_marginRight="5dp"-->
+    <!--        >-->
+    <!--        <EditText-->
+    <!--            android:drawableStart="@drawable/ic_search"-->
+    <!--            android:id="@+id/edit_box"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:hint="搜索内容"-->
+    <!--            android:background="@drawable/white_bt"-->
+    <!--            />-->
+    <!--        <Button-->
+    <!--            android:layout_alignParentRight="true"-->
+    <!--            android:id="@+id/search_bt"-->
+    <!--            android:layout_margin="1dp"-->
+    <!--            android:layout_width="60dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:text="搜索"-->
+    <!--            android:background="@drawable/orange_bt"/>-->
+
+    <!--    </RelativeLayout>-->
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bot_div"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/nullshow"
+        android:layout_below="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bot_div"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/car_img"
+            android:src="@drawable/ic_shoppingcar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+        <TextView
+            android:layout_below="@+id/car_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购物车竟然是空的"/>
+    </RelativeLayout>
+<RelativeLayout
+    android:id="@+id/bot_div"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/text_bg"
+    >
+    <RelativeLayout
+        android:id="@+id/select_div"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:focusable="true">
+        <Button
+            android:clickable="true"
+            android:id="@+id/select_bt"
+            android:layout_centerVertical="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/selector_selectbt"
+            android:focusable="true" />
+        <TextView
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/select_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全选"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/pay_div"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rmbicon"
+            android:layout_centerVertical="true"
+            android:text="合计"/>
+        <TextView
+            android:id="@+id/rmbicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/warning_red"
+            android:layout_centerVertical="true"
+
+            android:layout_toLeftOf="@+id/price"
+            android:text="¥ "/>
+        <TextView
+            android:id="@+id/price"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/warning_red"
+            android:layout_toLeftOf="@id/pay"
+            android:layout_marginRight="3dp"
+            android:text="0.00"/>
+        <Button
+            android:id="@+id/pay"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="结算"
+            android:background="@drawable/orange_bg"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/delete_bt"
+        android:visibility="gone"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="删除"
+        android:background="@drawable/blue_bg"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
+
+</RelativeLayout>

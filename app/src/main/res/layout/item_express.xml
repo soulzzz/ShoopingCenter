@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/store_div">
+    <com.xmut.shoppingcenter.utils.ImageUtil.RadiuImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/product_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitXY"
+        app:radius="10dp"
+        android:src="@drawable/avatar"
+        >
+    </com.xmut.shoppingcenter.utils.ImageUtil.RadiuImageView>
+    <TextView
+        android:ellipsize="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+
+        android:textSize="15dp"
+        android:id="@+id/product_name"
+        android:layout_toRightOf="@+id/product_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="product_name"/>
+    <TextView
+        android:id="@+id/exprss"
+        android:maxLines="2"
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/product_icon"
+        android:layout_below="@+id/product_name"
+        android:text="物流单号(点击复制):"
+        />
+
+</RelativeLayout>
+
+

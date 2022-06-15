@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/halfgray"
+   tools:context=".activities.PersonDetailActivity">
+    <RelativeLayout
+        android:id="@+id/top_div"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+        <ImageView
+            android:id="@+id/leave_bt"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_left_arrow"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text="个人信息"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@+id/top_div"
+        android:id="@+id/firstlinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:clickable="true"
+            android:id="@+id/avatar_div"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/white_bg"
+           >
+            <ImageView
+                android:id="@+id/avatar_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_avatar_icon" />
+            <TextView
+                android:layout_toRightOf="@+id/avatar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_centerVertical="true"
+                android:text="头像"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                />
+            <com.xmut.shoppingcenter.utils.ImageUtil.RadiuImageView
+                android:layout_toLeftOf="@id/avator_goto"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/avatar_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/avatar"
+                android:scaleType="centerCrop"
+                app:radius="5dp"
+               />
+
+
+            <ImageView
+                android:id="@+id/avator_goto"
+                android:layout_width="23dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_goto" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:id="@+id/password_div"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/white_bg"
+            >
+            <ImageView
+                android:id="@+id/password_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_pwd" />
+            <TextView
+                android:layout_toRightOf="@+id/password_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_centerVertical="true"
+                android:text="登录密码"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/pwd_goto"
+                android:layout_width="23dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_goto" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:clickable="true"
+            android:id="@+id/tel_div"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/white_bg"
+            >
+            <ImageView
+                android:id="@+id/tel_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_tel" />
+            <TextView
+                android:layout_toRightOf="@+id/tel_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_centerVertical="true"
+                android:text="手机号"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                />
+            <TextView
+                android:layout_toLeftOf="@+id/tel_goto"
+                android:layout_centerVertical="true"
+                android:id="@+id/tel_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test"/>
+
+
+            <ImageView
+                android:id="@+id/tel_goto"
+                android:layout_width="23dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_goto" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:clickable="true"
+            android:id="@+id/email_div"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+
+
+            android:background="@drawable/white_bg"
+          >
+            <ImageView
+                android:id="@+id/age_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_email"  />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="邮箱"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/age_img"
+                />
+
+
+            <TextView
+                android:layout_toLeftOf="@+id/email_goto"
+                android:layout_centerVertical="true"
+                android:id="@+id/email_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:text="test@qq.com"/>
+            <ImageView
+                android:id="@+id/email_goto"
+                android:layout_width="23dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_goto" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:clickable="true"
+            android:id="@+id/address_line"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/white_bg"
+
+            >
+            <ImageView
+                android:id="@+id/address_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_address" />
+
+
+            <TextView
+                android:id="@+id/profile_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="收货地址"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@+id/address_img"
+                />
+
+            <ImageView
+                android:id="@+id/profile_address_goto"
+                android:layout_width="23dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_goto" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

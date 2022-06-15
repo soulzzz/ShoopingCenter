@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1B4A4A">
+    <RelativeLayout
+        android:id="@+id/coupon_div"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/blank"
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+        <TextView
+            android:layout_marginTop="25dp"
+
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/value"
+            android:text="¥"/>
+            <TextView
+                android:id="@+id/value"
+                android:textSize="25dp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                />
+            <TextView
+                android:id="@+id/requirement"
+                android:textSize="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="满50可用"
+                />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/address_part"
+            android:layout_toRightOf="@id/blank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/coupon_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="coupon_name"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coupon_name"
+                android:layout_marginTop="10dp"
+                android:text="time1"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_toRightOf="@id/time1"
+                android:id="@+id/divide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coupon_name"
+                android:layout_marginTop="10dp"
+                android:text=" - "
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coupon_name"
+                android:layout_toRightOf="@+id/divide"
+                android:layout_marginTop="10dp"
+                android:text="time2"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    <TextView
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:rotation="-45"
+        android:text="已使用"/>
+
+
+
+    </RelativeLayout>
+
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+

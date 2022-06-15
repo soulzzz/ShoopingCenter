@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/halfwhite_bg">
+    <TextView
+
+        android:id="@+id/top"
+        android:layout_centerHorizontal="true"
+        android:text="为您推荐"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       />
+    <TextView
+        android:layout_below="@+id/top"
+        android:id="@+id/category"
+        android:layout_centerHorizontal="true"
+        android:text="类别"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <com.xmut.shoppingcenter.utils.ImageUtil.RadiuImageView
+        android:layout_below="@+id/category"
+        android:id="@+id/product_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/avatar"
+        app:radius="10dp"
+        />
+    <TextView
+        android:layout_marginLeft="2dp"
+        android:gravity="center"
+        android:id="@+id/product_name"
+        android:lines="2"
+        android:ellipsize="end"
+        android:layout_below="@id/product_img"
+        android:text="product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:id="@+id/iv_del"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@+id/top"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_item_delete"
+        android:visibility="visible"
+        />
+</RelativeLayout>

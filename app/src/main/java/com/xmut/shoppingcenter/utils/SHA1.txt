@@ -1,0 +1,80 @@
+
+DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:DEBUG:
+C:\Users\Soul\.android>keytool -list -v -keystore debug.keystore
+输入密钥库口令:
+密钥库类型: jks
+密钥库提供方: SUN
+
+您的密钥库包含 1 个条目
+
+别名: androiddebugkey
+创建日期: 2022-1-31
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: C=US, O=Android, CN=Android Debug
+发布者: C=US, O=Android, CN=Android Debug
+序列号: 1
+有效期为 Mon Jan 31 18:43:32 CST 2022 至 Wed Jan 24 18:43:32 CST 2052
+证书指纹:
+         MD5:  86:FC:4E:04:7D:86:87:F1:35:05:37:3F:59:6E:57:E6
+         SHA1: 13:57:D7:10:67:9A:94:2F:23:7E:50:74:3C:3D:0E:2A:A0:93:18:02
+         SHA256: 9B:97:97:0C:E0:70:EB:6F:58:ED:74:E1:FF:E5:49:95:BC:B8:3F:0F:F8:B4:4E:3C:6E:E6:97:9B:07:93:EA:3D
+签名算法名称: SHA1withRSA
+主体公共密钥算法: 2048 位 RSA 密钥
+版本: 1
+
+
+*******************************************
+*******************************************
+
+
+
+Warning:
+JKS 密钥库使用专用格式。建议使用 "keytool -importkeystore -srckeystore debug.keystore -destkeystore debug.keystore -deststoretype pkcs12" 迁移到行业标准格式 PKCS12。
+
+
+RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE: RELEASE:
+
+
+密钥库类型: jks
+密钥库提供方: SUN
+
+您的密钥库包含 1 个条目
+
+别名: key0
+创建日期: 2022-5-8
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=soul, OU=soul, O=soul, L=soul, ST=soul, C=86
+发布者: CN=soul, OU=soul, O=soul, L=soul, ST=soul, C=86
+序列号: 5e4f7eea
+有效期为 Sun May 08 13:15:19 CST 2022 至 Thu May 02 13:15:19 CST 2047
+证书指纹:
+         MD5:  CF:1B:B7:83:F1:1F:2D:9C:9E:61:DE:B8:5D:A4:BD:C0
+         SHA1: 13:D7:97:73:EF:17:24:CC:04:FD:11:F3:DC:38:5B:D7:5C:EE:BB:B5
+         SHA256: C7:C8:27:DF:CC:4D:23:68:CA:3D:8C:F1:53:F4:56:8E:75:1A:14:49:13:F3:20:37:DC:0F:5B:35:28:BE:71:E7
+签名算法名称: SHA256withRSA
+主体公共密钥算法: 2048 位 RSA 密钥
+版本: 3
+
+扩展:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: CB 94 AE 45 B9 72 3F F8   9A B9 57 11 09 CE 04 7A  ...E.r?...W....z
+0010: E3 64 13 54                                        .d.T
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+
+
+Warning:
+JKS 密钥库使用专用格式。建议使用 "keytool -importkeystore -srckeystore shoppingcenter.jks -destkeystore shoppingcenter.jks -deststoretype pkcs12" 迁移到行业标准格式 PKCS12。

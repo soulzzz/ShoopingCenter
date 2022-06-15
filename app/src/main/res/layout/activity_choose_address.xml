@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ps"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/halfgray"
+    >
+    <RelativeLayout
+        android:id="@+id/top_div"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/leave_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_left_arrow"
+            android:layout_gravity="left"/>
+        <TextView
+            android:id="@+id/change_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的收货地址"
+            android:textSize="17dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/top_div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addAddress"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/addressrecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/nullshow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="地址空空如也，快去添加地址吧!"/>
+    </RelativeLayout>
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/addAddress"
+
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:background="@drawable/orange_bg"
+            android:text="+ 新增收货地址"/>
+
+
+</RelativeLayout>
